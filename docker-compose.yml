@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    container_name: cityfix_container
+    volumes:
+      # Montar el código fuente local en el contenedor
+      - .:/app
+      # Aislar de forma obligatoria la carpeta node_modules interna
+      - /app/node_modules
+    # Inyectar de forma obligatoria los DNS públicos de Google para evitar bloqueos
+    dns:
+      - 8.8.8.8
+    environment:
+      - NODE_ENV=development
+    # Mantiene el contenedor vivo en segundo plano para que puedas entrar a ejecutar comandos
+    tty: true
+    stdin_open: true

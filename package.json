@@ -1,0 +1,19 @@
+{
+  "name": "cityfix-app",
+  "version": "1.0.0",
+  "description": "Integración de API Asistida por IA y Testing E2E Real dentro de Docker",
+  "main": "src/utils/reportEngine.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testRunner": "jest-circus/runner"
+  }
+}
